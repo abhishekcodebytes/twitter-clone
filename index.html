@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="shortcut icon" href="https://abs.twimg.com/favicons/twitter-pip.3.ico">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="./css/output.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class=" bg-black text-white">
+    <div class="flex container mx-auto ">
+        <div class="first w-16 md:w-[75%] h-screen sticky top-0">
+            <div class="logo flex justify-self-center items-center pl-10 my-4">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="white" class="w-8">
+                    <g>
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.171l-5.214-6.817L4.99 21.75H1.681l7.684-8.835L1.254 2.25H8.084l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            
+            <div class="sidebar flex md:items-end flex-col">
+
+                <ul class="flex  flex-col text-2xl space-y-3 md:px-11  font-bold w-full">
+
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-purple-950 hover:rounded-3xl cursor-pointer px-5 py-3 hover:rounded-full">
+                        <span class="material-symbols-outlined">home</span> <span class="hidden md:block ">Home</span>
+                    </li>
+
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-purple-950 hover:rounded-3xl cursor-pointer px-5 py-3 hover:rounded-full">
+                        <span class="material-symbols-outlined">search</span> <span class="hidden md:block ">Explore</span>
+                    </li>
+
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-purple-950 hover:rounded-3xl cursor-pointer px-5 py-3 hover:rounded-full">
+                        <span class="material-symbols-outlined">notifications</span> <span class="hidden md:block ">Notifications</span>
+                    </li>
+
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-purple-950 hover:rounded-3xl cursor-pointer px-5 py-3 hover:rounded-full">
+                        <span class="material-symbols-outlined">sensors_krx</span> <span class="hidden md:block ">Grok</span>
+                    </li>
+
+                    <li
+                        class=" flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-purple-950 hover:rounded-3xl cursor-pointer px-5 py-3 hover:rounded-full">
+                        <span class="material-symbols-outlined">lists</span> <span class="hidden md:block ">Lists </span>
+                    </li>
+
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-purple-950 hover:rounded-3xl cursor-pointer px-5 py-3 hover:rounded-full">
+                        <span class="material-symbols-outlined">bookmark</span> <span class="hidden md:block ">Bookmarks</span>
+                    </li>
+
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-purple-950 hover:rounded-3xl cursor-pointer px-5 py-3 hover:rounded-full">
+                        <span class="material-symbols-outlined">groups</span> <span class="hidden md:block ">Communities</span>
+                    </li>
+
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-purple-950 hover:rounded-3xl cursor-pointer px-5 py-3 hover:rounded-full">
+                        <span class="material-symbols-outlined">workspace_premium</span> <span class="hidden md:block ">Premium</span>
+                    </li>
+
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-purple-950 hover:rounded-3xl cursor-pointer px-5 py-3 hover:rounded-full">
+                        <span class="material-symbols-outlined">account_circle</span> <span class="hidden md:block ">Profile</span>
+                    </li>
+
+                    <li
+                        class="flex md:justify-start items-center gap-3 justify-center  mr-4 md:w-fit hover:bg-purple-950 hover:rounded-3xl cursor-pointer px-5 py-3 hover:rounded-full">
+                        <span class="material-symbols-outlined">more_horiz</span> <span class="hidden md:block ">More</span>
+                    </li>
+                    <li>
+                        <div class="button w-full text-center my-4">
+                            
+                              <button  class=" hidden md:block bg-[#1d9bf0] text-2xl px-20 py-4 rounded-full text-white font-semibold  transition-all"> Post </button>
+                            <button  class=" md:hidden bg-[#1d9bf0] text-2xl px-4 py-4 rounded-full text-white font-semibold  transition-all">  
+                                <span class="material-symbols-outlined">
+draft_orders
+</span>
+                            </button>
+
+                                
+                            
+                        </div>
+                    </li>
+                </ul>
+            
+<div class="userprofile w-full  relative top- ">
+              <div class="item flex items-center p-3 hover:bg-gray-800 cursor-pointer">
+    
+    <img src="image/ab.jpg" class="w-10 h-10 rounded-full object-cover">
+
+    <div class="ml-3 -mt-1">
+        <div class="flex items-center gap-1">
+            <span class="font-bold text-sm text-gray-200 hover:text-purple-900">
+                Abhishek
+            </span>
+
+            <span class="text-blue-400 text-xs">✔</span>
+        </div>
+
+        <span class="text-xs text-gray-400">
+            @abhishek_kumar
+        </span>
+    </div>
+
+    <button class="ml-auto w-24 rounded-full bg-white text-black px-2 py-1 font-semibold hover:bg-gray-200">
+        Follow
+    </button>
+
+</div>  
+            </div>
+
+            </div>
+            
+        </div>
+        
+        <div class="second w-full border-x border-x-gray-600 border-y-black ">
+
+            <div class="top flex p-3 relative ">
+
+
+
+                <div class="left  w-1/2 flex justify-center font-bold text-lg  cursor-pointer"> For You </div>
+
+                <div class="right  w-1/2 flex justify-center font-bold text-lg cursor-pointer">Following</div>
+
+                <div class="setting mx-2 cursor-pointer"><span class="material-symbols-outlined">
+
+                        settings
+
+                    </span></div>
+            </div>
+            <div class="absoloute w-16 h-1 rounded-full bg-blue-700 bottom-0 left-[18%]"></div>
+            <div class="h-[1px] w-full bg-gray-700"></div>
+            <div class="what is happening flex gap-3">
+                <div class="img m-3 ">
+                    <img src="https://www.shutterstock.com/image-vector/flat-vector-smiling-boy-headphones-600nw-2606713523.jpg"
+                        alt="" class="w-20 h-30 rounded-full right-5 ">
+                </div>
+
+                <input class="w-full  h-7 my-5 text-xl  bg-black  outline-none cursor-pointer text-white " type="text"
+                    placeholder="what is happening ">
+
+
+            </div>
+
+
+            <div class="flex items-center  mx-[17%]">
+                <span class="material-symbols-outlined text-blue-400">globe</span>
+                <span class="text-blue-400 font-bold  ">Everyone can reply</span>
+          
+        <div class="postbtn ml-auto">
+            <button  class=" hidden md:block bg-[#1d9bf0] text-sm px-6 py-2 rounded-full text-white font-semibold  transition-all">
+                 Post </button>
+
+            </div>
+
+            </div>
+            <div class="px-6">
+                <div class="h-[1px] w-full bg-gray-700 mt-2 my-2"></div>
+            </div>
+            
+
+
+            <div class="blueicons  items-center gap-2 mx-[17%] cursor-pointer text-blue-400 my-2    ">
+                <span class="material-symbols-outlined">image_arrow_up </span>
+                <span class="material-symbols-outlined">
+                    gif_box
+                </span>
+                <span class="material-symbols-outlined">
+                    ballot
+                </span>
+                <span class="material-symbols-outlined">
+                    emoji_language
+                </span>
+                <span class="material-symbols-outlined">
+                    calendar_month
+                </span>
+                <span class="material-symbols-outlined">
+                    location_on
+                </span>
+
+            </div>
+            
+            
+            <hr>
+
+            <!-- 1st Post -->
+            <div class="post flex items-start ">
+                <div class="img m-3">
+                    <div class="flex gap-5">
+
+                         <!--  Profile Pic -->
+                       <div class="w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
+                         
+                      
+
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUZ87OctIYXSgl7iuOvAEQi_FtXvGcCSiBrQ&s"
+                            alt="" class="w-11 h-11 rounded-full object-cover ">
+                        </div>
+
+                        <!-- Content  -->
+                        <div class="content ">
+                            <div class="flex items-center gap-5">
+    <span class="font-bold cursor-pointer hover:underline text-white text-lg">
+        Andar_Ki_Baat 🤫💀
+    </span>
+    <span class="text-gray-500 cursor-pointer">
+        @PicturesFolder · 6 hours ago
+    </span>
+</div>
+                            <div class="cursor-pointer ">
+                                Orange Cap bhi soch rahi hogi — main lucky hoon Rohit ke paas hoon 😂🍊</div>
+                            <div class="postimg m-4 ml-0  ">
+                                <img class="rounded-xl"
+                                    src="https://pbs.twimg.com/media/HEV7eVCbYAcd7FJ?format=jpg&name=900x900" alt="">
+                            </div>
+                            <div class="flex justify-around hover:cursor-pointer  ">
+
+                                <div class="icons flex items-center justify-center gap-20 text-gray-500 ">
+                                    <span class="flex items-center gap-1 hover:text-blue-600 ">
+                                        <span class="material-symbols-outlined">chat_bubble</span>
+                                        96.73k
+                                    </span>
+                                    <span class="flex items-center gap-1 hover:text-green-600">
+                                        <span class="material-symbols-outlined">repeat</span>
+                                        84.34k
+                                    </span>
+                                    <span class="flex items-center gap-1 hover:text-purple-600">
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        987.98k
+                                    </span>
+                                    <span class="flex items-center gap-1 hover:text-orange-600">
+                                        <span class="material-symbols-outlined">bar_chart</span>
+                                        2.9k
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="h-[1px] w-full bg-gray-700 mt-3"></div>
+                </div>
+            </div>
+
+<!-- 2nd pic -->
+          <div class="post flex items-start ">
+                <div class="img m-3">
+                    <div class="flex gap-5">
+
+                         <!--  Profile Pic -->
+                       <div class="w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiNYTG731WNKbS9V6EKANEnPGuakegSOTUQw&s"
+                            alt="" class="w-9 h-9 rounded-full object-cover ">
+                        </div>
+
+                        <!-- Content  -->
+                        <div class="content ">
+                            <div class="flex items-center gap-5">
+    <span class="font-bold cursor-pointer hover:underline text-white text-lg">
+        Ye_Public_Hai_Sab_Janti_Hai 😎🔥
+    </span>
+    <span class="text-gray-500 cursor-pointer">
+        @PicturesFolder · 6 hours ago
+    </span>
+</div>
+                            <div class="cursor-pointer ">
+                                Nathan Lyon has bowled 34504 deliveries and all those without ever delivering a single no ball..😮</div>
+                            <div class="postimg m-4 ml-0  ">
+                                <img class="rounded-xl"
+                                    src="https://pbs.twimg.com/media/Gv-6B9cW0AIoF16?format=jpg&name=small" alt="">
+                            </div>
+                            <div class="flex justify-around hover:cursor-pointer  ">
+
+                                <div class="icons flex items-center justify-center gap-20 text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">mode_comment</span>
+                                        96.73k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">repeat</span>
+                                        84.34k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        987.98k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">bar_chart</span>
+                                        2.9k
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="h-[1px] w-full bg-gray-700 mt-3"></div>
+                </div>
+            </div>
+
+            <!-- 3rd  post-->
+
+<div class="post flex items-start ">
+                <div class="img m-3">
+                    <div class="flex gap-5">
+
+                         <!--  Profile Pic -->
+                       <div class="w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrbLuNkrkr6gf6fShzFTN4sbn5koni2rSOyw&s"
+                            alt="" class="w-9 h-9 rounded-full object-cover ">
+                        </div>
+
+                        <!-- Content  -->
+                        <div class="content ">
+                            <div class="flex items-center gap-5">
+    <span class="font-bold cursor-pointer hover:underline text-white text-lg">
+        Not_For_Innocents 😈
+    </span>
+    <span class="text-gray-500 cursor-pointer">
+        @PicturesFolder · 6 hours ago
+    </span>
+</div>
+                            <div class="cursor-pointer ">
+                               MS Dhoni whatever his intentions were it was only for the good of Indian Cricket. He wasn't perfect in any sense(some say his intentions weren't right by sidelining seniors back in 2012 and had his favourites- who doesn't?) but he was a total team man and everyone loved playing</div>
+                            <div class="postimg m-4 ml-0  ">
+                                <img class="rounded-xl"
+                                    src="https://pbs.twimg.com/media/G2a6DkKWIAA5BXE?format=jpg&name=small" alt="">
+                            </div>
+                            <div class="flex justify-around hover:cursor-pointer  ">
+
+                                <div class="icons flex items-center justify-center gap-20 text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">mode_comment</span>
+                                        96.73k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">repeat</span>
+                                        84.34k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        987.98k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">bar_chart</span>
+                                        2.9k
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="h-[1px] w-full bg-gray-700 mt-3"></div>
+                </div>
+            </div>
+
+
+            <!-- 4th Post -->
+             <div class="post flex items-start ">
+                <div class="img m-3">
+                    <div class="flex gap-5">
+
+                         <!--  Profile Pic -->
+                       <div class="w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRBCWTbwGBV7-VNYJUQE9OA1wZtJXs94MsYg&s"
+                            alt="" class="w-9 h-9 rounded-full object-cover ">
+                        </div>
+
+                        <!-- Content  -->
+                        <div class="content ">
+                            <div class="flex items-center gap-5">
+    <span class="font-bold cursor-pointer hover:underline text-white text-lg">
+        Ulta_Pulta_World 🌍🙃
+    </span>
+    <span class="text-gray-500 cursor-pointer">
+        @PicturesFolder · 6 hours ago
+    </span>
+</div>
+                            <div class="cursor-pointer ">
+                                My respect for this team increases even more after achieving the impossible. India have won 2 of the last 3 ICC tournaments and lost only game. This game came in the finals in India's home conditon. Respect to Pat Cummins,Travis Head and Co. 🙏🫡</div>
+                            <div class="postimg m-4 ml-0  ">
+                                <img class="rounded-xl"
+                                    src="https://pbs.twimg.com/media/GlnUSjVaYAARXWm?format=jpg&name=small" alt="">
+                            </div>
+                            <div class="flex justify-around hover:cursor-pointer  ">
+
+                                <div class="icons flex items-center justify-center gap-20 text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">mode_comment</span>
+                                        96.73k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">repeat</span>
+                                        84.34k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        987.98k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">bar_chart</span>
+                                        2.9k
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="h-[1px] w-full bg-gray-700 mt-3"></div>
+                </div>
+            </div>
+
+
+            <!-- 5th post -->
+             <div class="post flex items-start ">
+                <div class="img m-3">
+                    <div class="flex gap-5">
+
+                         <!--  Profile Pic -->
+                       <div class="w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkQVkuLKOdN2ZFRDGEjcQlt2caYFrz3GLTnQ&s"
+                            alt="" class="w-9 h-9 rounded-full object-cover ">
+                        </div>
+
+                        <!-- Content  -->
+                        <div class="content ">
+                            <div class="flex items-center gap-5">
+    <span class="font-bold cursor-pointer hover:underline text-white text-lg">
+        Kuch_Bhi_Chalraha 😂
+    </span>
+    <span class="text-gray-500 cursor-pointer">
+        @PicturesFolder · 6 hours ago
+    </span>
+</div>
+                            <div class="cursor-pointer ">
+                                “Sachin watching this from pavilion: ‘ye kya ho raha hai bhai’ 😆” 😂🍊</div>
+                            <div class="postimg m-4 ml-0  ">
+                                <img class="rounded-xl"
+                                    src="https://pbs.twimg.com/media/F96zdhHWYAAxYrF?format=jpg&name=orig" alt="">
+                            </div>
+                            <div class="flex justify-around hover:cursor-pointer  ">
+
+                                <div class="icons flex items-center justify-center gap-20 text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">mode_comment</span>
+                                        96.73k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">repeat</span>
+                                        84.34k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        987.98k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">bar_chart</span>
+                                        2.9k
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="h-[1px] w-full bg-gray-700 mt-3"></div>
+                </div>
+            </div>
+
+            <!-- 6th post -->
+            <div class="post flex items-start ">
+                <div class="img m-3">
+                    <div class="flex gap-5">
+
+                         <!--  Profile Pic -->
+                       <div class="w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKGxi7l21R0FxI-HgM0h_pI4g3tweB6thOfw&s"
+                            alt="" class="w-9 h-9 rounded-full object-cover ">
+                        </div>
+
+                        <!-- Content  -->
+                        <div class="content ">
+                            <div class="flex items-center gap-5">
+    <span class="font-bold cursor-pointer hover:underline text-white text-lg">
+       Undefined_Behavior 🤖
+    </span>
+    <span class="text-gray-500 cursor-pointer">
+        @PicturesFolder · 6 hours ago
+    </span>
+</div>
+                            <div class="cursor-pointer ">
+                               “Dekhiye… reason to hai, but abhi bataunga to maza nahi aayega 🙂
+Thoda wait kariye… match khatam hone dijiye.”</div>
+                            <div class="postimg m-4 ml-0  ">
+                                <img class="rounded-xl"
+                                    src="https://pbs.twimg.com/media/GRGm3IcbMAA6i-w?format=jpg&name=small" alt="">
+                            </div>
+                            <div class="flex justify-around hover:cursor-pointer  ">
+
+                                <div class="icons flex items-center justify-center gap-20 text-gray-500">
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">mode_comment</span>
+                                        96.73k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">repeat</span>
+                                        84.34k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        987.98k
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <span class="material-symbols-outlined">bar_chart</span>
+                                        2.9k
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="h-[1px] w-full bg-gray-700 mt-3"></div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- 3rd column -->
+
+
+<div class="third w-full hidden md:block sticky top-0 h-screen overflow-hidden">
+            <div class="search m-5 ">
+
+                <input type="text"
+                    class="w-1/2 rounded-full text-center w-fit bg-gray-900  text-white px-4 py-3 cursor-pointer "
+                    placeholder="search ">
+
+            </div>
+
+            <div class="whats m-3 bg-[#16181c] w-1/2 py-5  rounded-xl space-y-3">
+                <h1 class="text-xl font-bold px-3">What's Happening</h1>
+
+                <div class="item   p-3 hover:bg-gray-800 cursor-pointer">
+                    <div class="font-bold text-lg text-gray-200">Trending in India</div>
+                    <div class="font-bold my-3">#Rohit Sharma </div>
+
+                    <div class="font-bold text-lg text-gray-200">986.9k Posts</div>
+
+                </div>
+
+
+                <div class="item   p-3 hover:bg-gray-800 cursor-pointer">
+                    <div class="font-bold text-lg text-gray-200">Trending in India</div>
+                    <div class="font-bold my-3">#jos Butler </div>
+
+                    <div class="font-bold text-lg text-gray-200">86.9k Posts</div>
+                </div>
+
+
+                <div class="item   p-3 hover:bg-gray-800 cursor-pointer">
+                    <div class="font-bold text-lg text-gray-200">Trending in India</div>
+                    <div class="font-bold my-3">#joe Root </div>
+
+                    <div class="font-bold text-lg text-gray-200">80.9k Posts</div>
+                </div>
+            </div>
+            <div class="whats m-3 bg-[#16181c] w-1/2 py-5  rounded-xl space-y-1 ">
+                <h1 class="text-xl font-bold px-3">Who To Follow</h1>
+
+                <div class="item flex items-center p-3  hover:bg-gray-800 cursor-pointer">
+    <img src="image/ab.jpg" class="w-10 h-10 rounded-full object-cover">
+
+    <div class="ml-3 flex flex-col">
+        <span class="font-bold text-sm text-gray-200  hover:text-purple-900 hover:cursor-pointer">
+            Abhishek</span>
+        <span class="text-xs text-gray-400">@abhishek_kumar</span>
+    </div>
+
+    <button class="w-24 ml-3 rounded-full bg-white text-black px-2 py-1 font-semibold">
+        Follow
+    </button>
+</div>
+
+<div class="item flex items-center p-3  hover:bg-gray-800 cursor-pointer">
+    <img src="image/ab.jpg" class="w-10 h-10 rounded-full object-cover">
+
+    <div class="ml-3 flex flex-col">
+        <span class="font-bold text-sm text-gray-200 hover:text-purple-900 hover:cursor-pointer">
+            Cockroach
+        </span>
+        <span class="text-xs text-gray-400">@cockroach</span>
+    </div>
+
+    <button class="w-24 ml-auto rounded-full bg-white text-black px-2 py-1 font-semibold">
+        Follow
+    </button>
+</div>
+
+<div class="item flex items-center p-3  hover:bg-gray-800 cursor-pointer">
+    <img src="image/ab.jpg" class="w-10 h-10 rounded-full object-cover">
+
+    <div class="ml-3 flex flex-col">
+        <span class="font-bold text-sm text-gray-200   hover:text-purple-900 hover:cursor-pointer">
+            Patna</span>
+        <span class="text-xs text-gray-400">Bihar, India</span>
+    </div>
+
+    <button class="w-24 ml-auto rounded-full bg-white text-black px-2 py-1 font-semibold">
+        Follow
+    </button>
+</div>
+                    <div class="text-blue-800 hover:underline my-1 cursor-pointer px-4">Show More</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
